@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BingeBuddy</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/2dfb5a5ef8.js" crossorigin="anonymous"></script>
+    <script src="search.js"></script>
+</head>
+<body style="background-color: #121212;">
+    <section id="search__header">
+        <nav>
+            <div class="nav__logo">
+                <img src="./assets/Colorful_Retro_Illustrative_Tasty_Popcorn_Logo-removebg-preview.png" class="nav__logo--img" alt="">
+                <div class="nav__logo--name">BingeBuddy</div>
+            </div>
+            <div class="nav__links">
+                <a href="./index.html" class="nav__link link__hover-effect link__hover-effect--yellow">Home</a>
+                <a href="" class="nav__link link__hover-effect link__hover-effect--yellow active">Search movies</a>
+                <a href="" class="nav__link nav__link--contact">Contact</a>
+            </div>
+        </nav>
+        <div class="browse__movies">
+            <h2 class="header__search--title">Browse our movies</h2>
+            <form onsubmit="return false" class="input-wrapper" onchange="OnSearchChange(event)">
+                <input
+                    class="search-input"
+                    type="text"
+                    placeholder="Search By Movie Or Series"
+                />
+                <button class="search-button">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+        </div>
+        <!-- <div class="overlay"></div> -->
+    </section>
+
+    <main id="films__main">
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="search__row">
+                        <h2 class="search-results">Search Results:</h2>
+                        <select name="" id="filter" onchange="filterFilms(event)">
+                            <option value="" disabled selected>Sort by</option>
+                            <option value="Newest">Newest</option>
+                            <option value="Oldest">Oldest</option>
+                        </select>
+                    </div>
+                    <div class="films">
+                        <i class="fa-solid fa-spinner films__loading--spinner"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
