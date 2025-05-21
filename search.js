@@ -1,4 +1,4 @@
-// https://www.omdbapi.com/?i=tt3896198&apikey=4ffeac5&s=action
+// API: https://www.omdbapi.com/?i=tt3896198&apikey=4ffeac5&s=action
 
 
 let filmsData;
@@ -9,7 +9,7 @@ async function renderFilms(filter) {
   filmsWrapper.innerHTML = `<i class="fa-solid fa-spinner films__loading--spinner"></i>`; // Force spinner
   filmsWrapper.classList.add("films__loading");
 
-  // Simulate delay to show the spinner (e.g., 500ms)
+  // Simulate delay to show the spinner
   await new Promise(resolve => setTimeout(resolve, 500));
 
   if (!filmsData) {
@@ -25,7 +25,7 @@ async function renderFilms(filter) {
     return;
   }
 
-  // Sort logic
+
   if (filter === 'Newest') {
     filmsData.Search.sort((a, b) => parseInt(b.Year) - parseInt(a.Year));
   } else if (filter === 'Oldest') {
