@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BingeBuddy</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="index.js"></script>
+    <script src="https://kit.fontawesome.com/2dfb5a5ef8.js" crossorigin="anonymous"></script>
 </head>
 <body style="background-color: #121212;">
     <nav>
@@ -17,9 +19,28 @@
             <a href="./search.html" class="nav__link link__hover-effect link__hover-effect--yellow">Search movies</a>
             <a href="" class="nav__link nav__link--contact">Contact</a>
         </div>
+        <button class="btn__menu" onclick="openMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="menu__backdrop">
+            <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <ul class="menu__links">
+                <li class="menu__list"> 
+                    <a href="#" class="link__hover-effect link__hover-effect--yellow menu__link" onclick="closeMenu()">Home</a>
+                </li>
+                <li class="menu__list">
+                    <a href="./search.html" class="link__hover-effect link__hover-effect--yellow menu__link" onclick="closeMenu()">Search movies</a>
+                </li>
+                <li class="menu__list">
+                    <a href="" class="link__hover-effect link__hover-effect--yellow menu__link" style="cursor: not-allowed"onclick="closeMenu()">Contact</a>
+                </li>
+            </ul>
+        </div>
     </nav>
 
-    <header>
+    <header class="home__header">
         <div class="header__title">America's favourite movie streaming platform</div>
         <div class="header__sub-title">Find all your favourite movies to binge🍿</div>
         <a href="./search.html" class="browse__button">Browse movies</a>

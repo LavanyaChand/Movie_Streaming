@@ -1,6 +1,7 @@
 // API: https://www.omdbapi.com/?i=tt3896198&apikey=4ffeac5&s=action
 
 
+
 let filmsData;
 
 async function renderFilms(filter) {
